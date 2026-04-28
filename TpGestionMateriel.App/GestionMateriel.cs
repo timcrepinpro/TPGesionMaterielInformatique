@@ -9,6 +9,16 @@ public class GestionMateriel
 
     public void AjouterMateriel(Materiel materiel)
     {
+        if (materiel == null)
+        {
+            Console.WriteLine("Le matériel ne peut pas être null.");
+            return;
+        }
+        if (materiels.Contains(materiel))
+        {
+            Console.WriteLine("Le matériel existe déjà dans la liste.");
+            return;
+        }
         materiels.Add(materiel);
     }
 
@@ -42,7 +52,7 @@ public class GestionMateriel
         {
             if (materiel.getreference() == reference)
             {
-                if (materiel.getdisponible())
+                if (materiel.getdisponible() ||materiel.getetat()!="Hors service")
                 {
                     materiel.setdisponible(false);
                     Console.WriteLine($"Le matériel {reference} a été emprunté.");
@@ -87,6 +97,7 @@ public class GestionMateriel
         }
         return $"Le matériel {reference} n'existe pas.";
     }
+
     public void setMateriels(List<Materiel> materiels)
     {
         this.materiels = materiels;
