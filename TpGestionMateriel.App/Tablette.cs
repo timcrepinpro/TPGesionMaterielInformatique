@@ -7,8 +7,8 @@ public class Tablette : Materiel
         this.tailleEcran = tailleEcran;
         this.styletinclut = styletinclut;
     }
-    public override string CalculerDuréeMaxEmprunt()
-    {        return "La durée maximale d'emprunt pour une tablette est de 7 jours.";
+    public override int CalculerDuréeMaxEmprunt()
+    {        return 7;
     }
     public override string Afficherinformation()
     {     return $"Tablette - Référence: {reference}, Marque: {marque}, Modèle: {modele}, Disponible: {disponible}, État: {etat}, Taille de l'écran: {tailleEcran} pouces, Stylet inclus: {styletinclut}";

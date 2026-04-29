@@ -12,9 +12,9 @@ public class OrdinateurPortable : Materiel
 
 
 
-    public override string CalculerDuréeMaxEmprunt()
+    public override int CalculerDuréeMaxEmprunt()
     {
-        return "La durée maximale d'emprunt pour un ordinateur portable est de 14 jours.";
+        return 14;
     }
     public override string Afficherinformation()
     {

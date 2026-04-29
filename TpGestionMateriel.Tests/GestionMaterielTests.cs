@@ -159,9 +159,9 @@ public sealed class MSTest
         // Act
         gestion.AfficherDuréeMaxEmprunt();
         // Assert
-        Assert.AreEqual("La durée maximale d'emprunt pour une tablette est de 7 jours.", tablette.CalculerDuréeMaxEmprunt());
-        Assert.AreEqual("La durée maximale d'emprunt pour un ordinateur portable est de 14 jours.", pc.CalculerDuréeMaxEmprunt());
-        Assert.AreEqual("La durée maximale d'emprunt pour un vidéo projecteur est de 3 jours.", vp.CalculerDuréeMaxEmprunt());
+        Assert.AreEqual(7, tablette.CalculerDuréeMaxEmprunt());
+        Assert.AreEqual(14, pc.CalculerDuréeMaxEmprunt());
+        Assert.AreEqual(3, vp.CalculerDuréeMaxEmprunt());
     }
     //Recherche par état
     [TestMethod]

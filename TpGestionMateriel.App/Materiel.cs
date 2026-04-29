@@ -14,7 +14,7 @@ public abstract class Materiel
         this.disponible = disponible;
         this.etat = etat;
     }
-    public abstract string CalculerDuréeMaxEmprunt();
+    public abstract int CalculerDuréeMaxEmprunt();
     public abstract string Afficherinformation();
     public void setreference(string reference)
     {
