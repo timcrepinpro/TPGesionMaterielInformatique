@@ -106,7 +106,7 @@ public class GestionMateriel
                 return materiel.Afficherinformation();
             }
         }
-        return $"Le matériel {reference} n'existe pas.";
+        return "null";
     }
 
     public void setMateriels(List<Materiel> materiels)

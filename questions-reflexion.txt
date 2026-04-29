@@ -1,0 +1,10 @@
+1. Quelle est la différence entre un test manuel et un test unitaire ?
+le test manuel sexecute en testant le code depui linterieur lor se que le test unitaire se teste de lexterieur
+2. Pourquoi place-t-on les tests dans un projet séparé ?
+car en sois il ne font pas partie du code 
+3. Pourquoi faut-il tester plusieurs cas pour une même méthode ?
+oui
+4. Que signifient les trois étapes suivantes ?
+arrange pour initialiser et preparer , act pour apeller , assert pour tester le resultat
+5. Pourquoi le polymorphisme est-il utile dans le calcul de la durée maximale totale ?
+car la valeur change en fonction de la class donc il faut definir une fonction differente pour different resultat

@@ -18,7 +18,7 @@ public class OrdinateurPortable : Materiel
     }
     public override string Afficherinformation()
     {
-        return $"Ordinateur Portable - Référence: {reference}, Marque: {marque}, Modèle: {modele}, Disponible: {disponible}, État: {etat}, RAM: {ramGO} Go, Possède un chargeur: {possedeChargeur}";
+        return $"Ordinateur Portable - Référence: {reference}, Marque: {marque}, Modèle: {modele}, Disponible: {(disponible ? "Vrai" : "Faux")}, État: {etat}, RAM: {ramGO} Go, Possède un chargeur: {(possedeChargeur ? "Vrai" : "Faux")}";
     }
     public void setramGO(int ramGO)
     {
