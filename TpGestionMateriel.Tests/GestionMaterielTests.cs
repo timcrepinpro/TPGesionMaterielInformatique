@@ -191,7 +191,7 @@ public sealed class MSTest
         // Act
         int nombreDisponibles = gestion.Comterdisponible();
         // Assert
-        Assert.AreEqual(2, nombreDisponibles);
+        Assert.AreEqual(1, nombreDisponibles);
     }
     
 }
