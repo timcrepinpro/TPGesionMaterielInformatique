@@ -117,6 +117,31 @@ public class GestionMateriel
     {
         return this.materiels;
     }
+    public string RechercherParetat(string etat)
+    {
+        foreach (var materiel in materiels)
+        {
+            if (materiel.getetat() == etat)
+            {
+                return materiel.Afficherinformation();
+            }
+        }
+        return "null";
+    }
+    public int Comterdisponible()
+    {
+        int count = 0;
+        foreach (var materiel in materiels)
+        {
+            if (materiel.getdisponible())
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
 
    
 

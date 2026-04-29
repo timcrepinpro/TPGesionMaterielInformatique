@@ -163,5 +163,35 @@ public sealed class MSTest
         Assert.AreEqual("La durée maximale d'emprunt pour un ordinateur portable est de 14 jours.", pc.CalculerDuréeMaxEmprunt());
         Assert.AreEqual("La durée maximale d'emprunt pour un vidéo projecteur est de 3 jours.", vp.CalculerDuréeMaxEmprunt());
     }
+    //Recherche par état
+    [TestMethod]
+    public void RechercherParEtat_RetourneMaterielsCorrects()
+    {
+        GestionMateriel gestion = new GestionMateriel();
+        OrdinateurPortable pc1 = new OrdinateurPortable("PC001", "Dell", "XPS 13", true, "En service", 16, true);
+        OrdinateurPortable pc2 = new OrdinateurPortable("PC002", "Dell", "XPS 13", true, "Hors service", 16, true);
+        gestion.AjouterMateriel(pc1);
+        gestion.AjouterMateriel(pc2);
+        // Act
+        gestion.RechercherParetat("En service");
+        gestion.RechercherParetat("Hors service");
+        // Assert
+        Assert.AreEqual("Ordinateur Portable - Référence: PC001, Marque: Dell, Modèle: XPS 13, Disponible: Vrai, État: En service, RAM: 16 Go, Possède un chargeur: Vrai", gestion.RechercherParetat("En service").ToString());
+        Assert.AreEqual("Ordinateur Portable - Référence: PC002, Marque: Dell, Modèle: XPS 13, Disponible: Vrai, État: Hors service, RAM: 16 Go, Possède un chargeur: Vrai", gestion.RechercherParetat("Hors service").ToString());
+    }
+    //Compter les matériels disponibles
+    [TestMethod]
+    public void CompterMaterielsDisponibles_RetourneNombreCorrect()
+    {
+        GestionMateriel gestion = new GestionMateriel();
+        OrdinateurPortable pc1 = new OrdinateurPortable("PC001", "Dell", "XPS 13", true, "En service", 16, true);
+        OrdinateurPortable pc2 = new OrdinateurPortable("PC002", "Dell", "XPS 13", false, "En service", 16, true);
+        gestion.AjouterMateriel(pc1);
+        gestion.AjouterMateriel(pc2);
+        // Act
+        int nombreDisponibles = gestion.Comterdisponible();
+        // Assert
+        Assert.AreEqual(2, nombreDisponibles);
+    }
     
 }
