@@ -48,23 +48,33 @@ public class GestionMateriel
     }
     public void EmprunterMateriel(string reference)
     {
-        foreach (var materiel in materiels)
+        try
         {
-            if (materiel.getreference() == reference)
+            foreach (var materiel in materiels)
             {
-                if (materiel.getdisponible() ||materiel.getetat()!="Hors service")
+                if (materiel.getreference() == reference)
                 {
-                    materiel.setdisponible(false);
-                    Console.WriteLine($"Le matériel {reference} a été emprunté.");
+                    if (materiel.getdisponible() && materiel.getetat()!="Hors service" )
+                    {
+                        materiel.setdisponible(false);
+                        Console.WriteLine($"Le matériel {reference} a été emprunté.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Le matériel {reference} n'est pas disponible.");
+                    }
+                    return;
                 }
-                else
-                {
-                    Console.WriteLine($"Le matériel {reference} n'est pas disponible.");
-                }
-                return;
+                Console.WriteLine($"Le matériel {reference} n'existe pas.");
+                
             }
         }
-        Console.WriteLine($"Le matériel {reference} n'existe pas.");
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Une erreur est survenue lors de l'emprunt du matériel {reference}: {ex.Message}");
+        }
+        
+        
     }
     public void RetournerMateriel(string reference)
     {
