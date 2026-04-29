@@ -7,19 +7,20 @@ public class GestionMateriel
         materiels = new List<Materiel>();
     }
 
-    public void AjouterMateriel(Materiel materiel)
+    public bool AjouterMateriel(Materiel materiel)
     {
         if (materiel == null)
         {
             Console.WriteLine("Le matériel ne peut pas être null.");
-            return;
+            return false;
         }
         if (materiels.Contains(materiel))
         {
             Console.WriteLine("Le matériel existe déjà dans la liste.");
-            return;
+            return false;
         }
         materiels.Add(materiel);
+        return true;
     }
 
     public void AfficherTousLesMateriels()
