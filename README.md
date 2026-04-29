@@ -16,6 +16,9 @@ Ce projet permet de manipuler les notions de programmation orientée objet en C#
 - Afficher les matériels disponibles
 - Afficher tous les matériels
 - Calculer la durée maximale totale d’emprunt
+- Recherche par état
+- Compter les matériels disponibles
+
 ## Tests
 Les tests unitaires sont placés dans le projet :
 TpGestionMateriel.Tests
