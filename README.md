@@ -27,44 +27,46 @@ dotnet test
 ## Branche utilisée
 dev-poo-tests
 ## arborescence
-├──.sixth/
+TPGestionMatereil/
 
-├──TPGestionMatereil.app/
+├── .sixth/
 
-│ ├──bin/
+├── TPGestionMatereil.app/
 
-│ ├──obj/
+│   ├── bin/
 
-│ ├──-GestionMateriel.cs
+│   ├── obj/
 
-│ ├──Materiel.cs
+│   ├── GestionMateriel.cs
 
-│ ├──OrdinateurPortable.cs
+│   ├── Materiel.cs
 
-│ ├──Program.cs
+│   ├── OrdinateurPortable.cs
 
-│ ├──Tablette.cs
+│   ├── Program.cs
 
-│ ├──VideoProjeteur
+│   ├── Tablette.cs
 
-│ └──TpGestionMateriel.App.csproj 
+│   └── VideoProjeteur.cs
 
-├──TpGestionMateriel.Tests
+│
 
-│ ├──bin/
+├── TPGestionMatereil.Tests/
 
-│ ├──obj/
+│   ├── bin/
 
-│ ├──GestionMaterielTest.cs
+│   ├── obj/
 
-│ ├──MSTestSetting.cs
+│   ├── GestionMaterielTest.cs
 
-│ └──TpGestionMateriel.Tests.csproj
+│   └── MSTestSetting.cs
 
-├──README.md
+│
 
-├──.gitignore
+├── README.md
 
-├──questions-reflexion.txt
+├── .gitignore
 
-└──TPGestionMateriel.slnx
+├── questions-reflexion.txt
+
+└── TPGestionMatereil.slnx
