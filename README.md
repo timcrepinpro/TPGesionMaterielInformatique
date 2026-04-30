@@ -27,7 +27,7 @@ dotnet test
 ## Branche utilisée
 dev-poo-tests
 ## arborescence
-├──.sixth/ \n
+├──.sixth/ ```
 ├──TPGestionMatereil.app/
 │ ├──bin/
 │ ├──obj/
