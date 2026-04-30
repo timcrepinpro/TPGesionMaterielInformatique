@@ -26,3 +26,25 @@ Pour lancer les tests :
 dotnet test
 ## Branche utilisée
 dev-poo-tests
+## arborescence
+|-.sixth/
+|-TPGestionMatereil.app/
+| |-bin/
+| |-obj/
+| |-GestionMateriel.cs
+| |-Materiel.cs
+| |-OrdinateurPortable.cs
+| |-Program.cs
+| |-Tablette.cs
+| |-VideoProjeteur
+| |-TpGestionMateriel.App.csproj
+|-TpGestionMateriel.Tests
+| |-bin/
+| |-obj/
+| |-GestionMaterielTest.cs
+| |-MSTestSetting.cs
+| |-TpGestionMateriel.Tests.csproj
+|-README.md
+|-.gitignore
+|-questions-reflexion.txt
+|-TPGestionMateriel.slnx
